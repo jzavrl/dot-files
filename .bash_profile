@@ -11,7 +11,7 @@
 
 # Adds custom folders to PATH variable
 # --------------------------------------------
-	export PATH="$HOME/bin:/usr/local/bin/:$PATH"
+	export PATH="$HOME/.bin:/usr/local/bin/:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin"
 
 # Set default editor
 # --------------------------------------------
@@ -34,8 +34,15 @@ alias ..="cd ../"
 alias ...="cd ../../"
 alias ....="cd ../../../"
 
-# Edit file in Sublime Text Editor
-alias edit="/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl"
+# Edit file in Sublime Text editor
+edit () {
+	if [ -f $1 ] ;
+	then
+		open -a 'Sublime Text' $1
+	else
+		echo '$1 is not a valid file or you do not have access to it'
+	fi
+}
 
 # Open current directory in Finder
 alias finder="open -a Finder ./"
@@ -47,4 +54,68 @@ alias home="cd ~"
 alias path='echo -e ${PATH//:/\\n}'
 
 # Open file in quick look
-ql () { qlmanage -p "$*" >& /dev/null; }
+ql () {
+	qlmanage -p "$*" >& /dev/null;
+}
+
+# Reloads bash profile file
+alias reload="source ~/.bash_profile"
+
+# Update bash file from Git
+alias updateBash="curl https://raw.githubusercontent.com/jzavrl/dot-files/master/.bash_profile > ~/.bash_profile && reload"
+
+# Extract most used compressed files
+extract () {
+	if [ -f $1 ] ;
+	then
+		case $1 in
+			*.tar.bz2)		tar xjf $1		;;
+			*.tar.gz)			tar xzf $1		;;
+			*.bz2)				bunzip2 $1		;;
+			*.rar)				unrar e $1		;;
+			*.gz)					gunzip $1			;;
+			*.tar)				tar xf $1			;;
+			*.tbz2)				tar xjf $1		;;
+			*.tgz)				tar xzf $1		;;
+			*.zip)				unzip $1			;;
+			*.Z)					uncompress $1	;;
+			*.7z)					7z x $1 			;;
+			*)						echo "'$1' cannot be extracted via extract()" ;;
+		esac
+	else
+		echo "'$1' is not a valid file"
+	fi
+}
+
+
+# --------------------------------------------
+# DEVELOPMENT
+# --------------------------------------------
+
+# Edit apache conf file
+alias apacheEdit='sudo nano /etc/apache2/users/JanZavrl.conf'
+
+# Reload apache conf dot-files
+alias apacheRestart='sudo apachectl graceful'
+
+# Edit hosts file
+alias editHosts='sudo nano /etc/hosts'
+
+# Flush DNS
+alias flushdns='dscacheutil -flushcache'
+
+# Get my current IP address
+alias myip='curl ip.appspot.com'
+
+
+# --------------------------------------------
+# SERVERS
+# --------------------------------------------
+
+# Add aliases for quick ssh connection
+alias eos='ssh -2 -p 22 aegir@eos.iuvo.si'
+alias eos.root='ssh -2 -p 22 nyx@eos.iuvo.si'
+alias aura='ssh -2 -p 22 aegir@aura.iuvo.si'
+alias aura.root='ssh -2 -p 22 nyx@aura.iuvo.si'
+alias spiible='ssh -2 -p 22 spiible@104.131.34.201'
+alias de.agiledrop='ssh -2 -p 22 agiledrop@88.198.10.150'
