@@ -61,6 +61,9 @@ ql () {
 # Reloads bash profile file
 alias reload="source ~/.bash_profile"
 
+# Run drupal-permissions.sh bash file on Drupal installation
+alias fixPermissions="bash ~/.bin/drupal-permissions.sh"
+
 # Update bash file from Git
 alias updateBash="curl https://raw.githubusercontent.com/jzavrl/dot-files/master/.bash_profile > ~/.bash_profile && reload"
 
