@@ -19,9 +19,19 @@ if [ $(id -u) != 0 ]; then
 	print_help
 	exit 1
 fi
-drupal_path=${1%/}
-drupal_user=${2:-JanZavrl}
-httpd_group="${3:-_www}"
+# Set defaults
+drupal_path_default=$(pwd)
+drupal_user_default=$USER
+httpd_group_default="_www"
+
+# Set variables
+drupal_path=${1:-$drupal_path_default}
+drupal_user=${2:-$drupal_user_default}
+httpd_group=${3:-$httpd_group_default}
+
+# Remove trailing slash
+drupal_path=${drupal_path%/}
+
 # Parse Command Line Arguments
 while [ $# -gt 0 ]; do
 	case "$1" in
