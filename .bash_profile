@@ -64,6 +64,9 @@ alias reload="source ~/.bash_profile"
 # Update bash file from Git
 alias updateBash="curl https://raw.githubusercontent.com/jzavrl/dot-files/master/.bash_profile > ~/.bash_profile && reload"
 
+# Update Drupal permissions bash file from Git
+alias updateDrupalPermissions="curl https://raw.githubusercontent.com/jzavrl/dot-files/master/drupal-permissions.sh > ~/.bin/drupal-permissions.sh"
+
 # Extract most used compressed files
 extract () {
 	if [ -f $1 ] ;
