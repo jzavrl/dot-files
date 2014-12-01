@@ -50,6 +50,9 @@ alias finder="open -a Finder ./"
 # Go to Home directory
 alias home="cd ~"
 
+# Go to development folder
+alias dev="cd ~/Development/Localhost"
+
 # Show executable paths
 alias path='echo -e ${PATH//:/\\n}'
 
