@@ -21,7 +21,7 @@ if [ $(id -u) != 0 ]; then
 fi
 # Set defaults
 drupal_path_default=$(pwd)
-drupal_user_default=$USER
+drupal_user_default=${SUDO_USER:-$USER}
 httpd_group_default="_www"
 
 # Set variables
