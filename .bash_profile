@@ -11,7 +11,7 @@
 
 # Adds custom folders to PATH variable
 # --------------------------------------------
-	export PATH="$HOME/.bin:/usr/local/bin/:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin"
+	export PATH="$HOME/.bin:/usr/local/bin:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin"
 
 # Set default editor
 # --------------------------------------------
@@ -108,7 +108,7 @@ alias apacheEdit='sudo nano /etc/apache2/users/JanZavrl.conf'
 alias apacheRestart='sudo apachectl graceful'
 
 # Edit hosts file
-alias editHosts='sudo nano /etc/hosts'
+alias hostEdit='sudo nano /etc/hosts'
 
 # Flush DNS
 alias flushdns='dscacheutil -flushcache'
