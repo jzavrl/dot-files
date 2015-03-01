@@ -3,7 +3,7 @@
 # Custom bash configuration file containing some neat
 # shortcuts and commands for quicker workflow
 #
-# -------------------------------------------- --------------------------------------------
+# ----------------------------------------------------------------------------------------
 
 # --------------------------------------------
 # ENVIROMENT CONFIGURATION
