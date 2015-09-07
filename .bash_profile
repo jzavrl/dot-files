@@ -11,7 +11,7 @@
 
 # Adds custom folders to PATH variable
 # --------------------------------------------
-	export PATH="$HOME/.bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/Applications/MAMP/Library/bin/"
+	export PATH="$HOME/.bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/Applications/MAMP/Library/bin/:/Applications/MAMP/bin/php/php5.6.10/bin"
 
 # Set default editor
 # --------------------------------------------
