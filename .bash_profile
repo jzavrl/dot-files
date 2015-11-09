@@ -9,10 +9,6 @@
 # ENVIROMENT CONFIGURATION
 # --------------------------------------------
 
-# Adds custom folders to PATH variable
-# --------------------------------------------
-	export PATH="$HOME/.bin:/Applications/MAMP/Library/bin/:/Applications/MAMP/bin/php/php5.6.10/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin"
-
 # Set default editor
 # --------------------------------------------
 	export EDITOR=/usr/bin/nano
@@ -20,7 +16,6 @@
 # Set default blocksize for ls, df, du
 # --------------------------------------------
 	export BLOCKSIZE=1k
-
 
 # --------------------------------------------
 # TERMINAL SHORTCUTS
@@ -130,6 +125,4 @@ alias spiible='ssh -2 -p 22 spiible@spiible.com'
 alias de.agiledrop='ssh -2 -p 22 agiledrop@de.agiledrop.com'
 alias dev.agiledrop='ssh -2 -p 22 agiledrop@dev.agiledrop.com'
 alias prod.agiledrop='ssh -2 -p 22 agiledrop@prod.agiledrop.com'
-alias nj.agiledrop='ssh -2 -p 22 root@nj.agiledrop.com'
-alias fov.staging='ssh -2 -p 22 root@193.2.122.21'
-alias fov.production='ssh -2 -p 22 root@193.2.122.59'
+alias homeathome='ssh -2 -p 22 agile@new.homeathome.com'
