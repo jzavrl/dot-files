@@ -9,6 +9,13 @@
 # ENVIROMENT CONFIGURATION
 # --------------------------------------------
 
+# Adds custom folders to PATH variable
+# --------------------------------------------
+	export PATH="$HOME/.bin:$PATH"
+	export PATH="/usr/local/bin:$PATH"
+	export PATH="/Applications/MAMP/bin/php/php5.6.10/bin:$PATH"
+	export PATH="/Applications/MAMP/Library/bin/:$PATH"
+
 # Set default editor
 # --------------------------------------------
 	export EDITOR=/usr/bin/nano
