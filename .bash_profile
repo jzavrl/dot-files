@@ -69,7 +69,7 @@ dev() {
 alias path='echo -e ${PATH//:/\\n}'
 
 # Open file in quick look
-ql () {
+ql() {
 	qlmanage -p "$*" >& /dev/null;
 }
 
