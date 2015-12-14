@@ -56,12 +56,12 @@ dev() {
 	then
 		if [ -d $PROJECT ];
 		then
-		  "cd $PROJECT";
+		  builtin cd "$PROJECT";
 		else
-			"cd $DEFAULT";
+			builtin cd "$DEFAULT";
 		fi
 	else
-		"cd $DEFAULT";
+		builtin cd "$DEFAULT";
 	fi
 }
 
