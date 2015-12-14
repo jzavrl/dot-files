@@ -24,27 +24,21 @@
 # --------------------------------------------
 	export BLOCKSIZE=1k
 
+
 # --------------------------------------------
 # TERMINAL SHORTCUTS
 # --------------------------------------------
 
 # List directory contents after using "cd" command
-cd() { builtin cd "$@"; ls; }
+cd() {
+	builtin cd "$@";
+	ls;
+}
 
 # Set "cd" shortcuts for backward listing
 alias ..="cd ../"
 alias ...="cd ../../"
 alias ....="cd ../../../"
-
-# Edit file in Sublime Text editor
-edit () {
-	if [ -f $1 ] ;
-	then
-		open -a 'Sublime Text' $1
-	else
-		echo '$1 is not a valid file or you do not have access to it'
-	fi
-}
 
 # Open current directory in Finder
 alias finder="open -a Finder ./"
@@ -52,8 +46,24 @@ alias finder="open -a Finder ./"
 # Go to Home directory
 alias home="cd ~"
 
-# Go to development folder
-alias dev="cd ~/Development/Localhost"
+# Go to site development site folder
+dev() {
+	PROJECT=$1
+	PATH="~/Development/Localhost/"$PROJECT"/www"
+	DEFAULT="~/Development/Localhost"
+
+	if [ -z "$PROJECT" ] ;
+	then
+		if [ -d $PATH ];
+		then
+		  builtin cd $PATH;
+		else
+			builtin cd $DEFAULT;
+		fi
+	else
+		builtin cd $DEFAULT;
+	fi
+}
 
 # Show executable paths
 alias path='echo -e ${PATH//:/\\n}'
@@ -98,20 +108,6 @@ extract () {
 	fi
 }
 
-
-# --------------------------------------------
-# DEVELOPMENT
-# --------------------------------------------
-
-# Edit apache conf file
-alias apacheEdit='sudo nano /etc/apache2/users/JanZavrl.conf'
-
-# Reload apache conf dot-files
-alias apacheRestart='sudo apachectl graceful'
-
-# Edit hosts file
-alias hostEdit='sudo nano /etc/hosts'
-
 # Flush DNS
 alias flushdns='dscacheutil -flushcache'
 
@@ -128,7 +124,6 @@ alias eos='ssh -2 -p 22 aegir@eos.iuvo.si'
 alias eos.root='ssh -2 -p 22 nyx@eos.iuvo.si'
 alias aura='ssh -2 -p 22 aegir@aura.iuvo.si'
 alias aura.root='ssh -2 -p 22 nyx@aura.iuvo.si'
-alias spiible='ssh -2 -p 22 spiible@spiible.com'
 alias de.agiledrop='ssh -2 -p 22 agiledrop@de.agiledrop.com'
 alias dev.agiledrop='ssh -2 -p 22 agiledrop@dev.agiledrop.com'
 alias prod.agiledrop='ssh -2 -p 22 agiledrop@prod.agiledrop.com'
