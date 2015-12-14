@@ -48,7 +48,7 @@ alias home="cd ~"
 
 # Go to site development site folder
 dev() {
-	PROJECT=$1
+	PROJECT=$@
 	PROJECT="~/Development/Localhost/"$PROJECT"/www"
 	DEFAULT="~/Development/Localhost"
 
@@ -56,7 +56,7 @@ dev() {
 	then
 		if [ -d $PROJECT ];
 		then
-		  builtin cd "$PROJECT";
+			builtin cd "$PROJECT";
 		else
 			builtin cd "$DEFAULT";
 		fi
