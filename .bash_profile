@@ -49,19 +49,19 @@ alias home="cd ~"
 # Go to site development site folder
 dev() {
 	PROJECT=$1
-	PATH="~/Development/Localhost/"$PROJECT"/www"
+	PROJECT="~/Development/Localhost/"$PROJECT"/www"
 	DEFAULT="~/Development/Localhost"
 
 	if [ -z "$PROJECT" ] ;
 	then
-		if [ -d $PATH ];
+		if [ -d $PROJECT ];
 		then
-		  builtin cd $PATH;
+		  "cd $PROJECT";
 		else
-			builtin cd $DEFAULT;
+			"cd $DEFAULT";
 		fi
 	else
-		builtin cd $DEFAULT;
+		"cd $DEFAULT";
 	fi
 }
 
