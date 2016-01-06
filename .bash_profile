@@ -16,10 +16,6 @@
 	export PATH="/Applications/MAMP/bin/php/php5.6.10/bin:$PATH"
 	export PATH="/Applications/MAMP/Library/bin:$PATH"
 
-# Configuration for nvm to work properly
-export NVM_DIR="/Users/JanZavrl/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
 # Set default editor
 # --------------------------------------------
 	export EDITOR=/usr/bin/nano
@@ -132,3 +128,7 @@ alias de.agiledrop='ssh -2 -p 22 agiledrop@de.agiledrop.com'
 alias dev.agiledrop='ssh -2 -p 22 agiledrop@dev.agiledrop.com'
 alias prod.agiledrop='ssh -2 -p 22 agiledrop@prod.agiledrop.com'
 alias homeathome='ssh -2 -p 22 agile@new.homeathome.com'
+
+# Configuration for nvm to work properly
+export NVM_DIR="/Users/JanZavrl/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
