@@ -16,6 +16,10 @@
 	export PATH="/Applications/MAMP/bin/php/php5.6.10/bin:$PATH"
 	export PATH="/Applications/MAMP/Library/bin:$PATH"
 
+# Configuration for nvm to work properly
+export NVM_DIR="/Users/JanZavrl/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
 # Set default editor
 # --------------------------------------------
 	export EDITOR=/usr/bin/nano
