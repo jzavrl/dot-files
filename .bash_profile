@@ -49,20 +49,19 @@ alias home="cd $HOME"
 
 # Go to site development site folder
 dev() {
-	PROJECT=$@
-	PROJECT_PATH="$HOME/Development/Localhost/"$@"/www"
-	DEFAULT="$HOME/Development/Localhost"
+	PROJECT_PATH="$HOME/Development/Localhost/"$1"/www"
+	DEFAULT_PATH="$HOME/Development/Localhost"
 
-	if [ -z "$PROJECT" ] ;
+	if [ -z "$1" ];
 	then
+		builtin cd "$DEFAULT_PATH";
+	else
 		if [ -d $PROJECT_PATH ];
 		then
 			builtin cd "$PROJECT_PATH";
 		else
-			builtin cd "$DEFAULT";
+			builtin cd "$DEFAULT_PATH";
 		fi
-	else
-		builtin cd "$DEFAULT";
 	fi
 }
 
@@ -88,7 +87,7 @@ alias updateDrupalPermissions="curl https://raw.githubusercontent.com/jzavrl/dot
 
 # Extract most used compressed files
 extract () {
-	if [ -f $1 ] ;
+	if [ -f $1 ];
 	then
 		case $1 in
 			*.tar.bz2)		tar xjf $1		;;
