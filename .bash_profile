@@ -23,6 +23,10 @@
 # Set default blocksize for ls, df, du
 # --------------------------------------------
 	export BLOCKSIZE=1k
+	
+# Configuration for nvm to work properly
+export NVM_DIR="/Users/JanZavrl/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 
 # --------------------------------------------
@@ -49,14 +53,14 @@ alias home="cd ~"
 # Go to site development site folder
 dev() {
 	PROJECT=$@
-	PROJECT="~/Development/Localhost/"$PROJECT"/www"
+	PROJECT_PATH="~/Development/Localhost/"$@"/www"
 	DEFAULT="~/Development/Localhost"
 
 	if [ -z "$PROJECT" ] ;
 	then
-		if [ -d $PROJECT ];
+		if [ -d $PROJECT_PATH ];
 		then
-			builtin cd "$PROJECT";
+			builtin cd "$PROJECT_PATH";
 		else
 			builtin cd "$DEFAULT";
 		fi
@@ -128,7 +132,3 @@ alias de.agiledrop='ssh -2 -p 22 agiledrop@de.agiledrop.com'
 alias dev.agiledrop='ssh -2 -p 22 agiledrop@dev.agiledrop.com'
 alias prod.agiledrop='ssh -2 -p 22 agiledrop@prod.agiledrop.com'
 alias homeathome='ssh -2 -p 22 agile@new.homeathome.com'
-
-# Configuration for nvm to work properly
-export NVM_DIR="/Users/JanZavrl/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
