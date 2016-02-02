@@ -21,10 +21,6 @@ export EDITOR=/usr/bin/nano
 # Set default blocksize for ls, df, du
 export BLOCKSIZE=1k
 
-# Configuration for nvm to work properly
-export NVM_DIR="~/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
 
 # --------------------------------------------
 # TERMINAL SHORTCUTS
@@ -128,3 +124,4 @@ alias de.agiledrop='ssh -2 -p 22 agiledrop@de.agiledrop.com'
 alias dev.agiledrop='ssh -2 -p 22 agiledrop@dev.agiledrop.com'
 alias prod.agiledrop='ssh -2 -p 22 agiledrop@prod.agiledrop.com'
 alias homeathome='ssh -2 -p 22 agile@new.homeathome.com'
+alias unesco.staging='ssh -2 -p 22 agiledrop@193.242.192.195'
