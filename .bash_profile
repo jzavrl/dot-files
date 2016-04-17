@@ -112,13 +112,5 @@ alias myip='curl ip.appspot.com'
 # SERVERS
 # --------------------------------------------
 
-# Add aliases for quick ssh connection
-alias eos='ssh -2 -p 22 aegir@eos.iuvo.si'
-alias eos.root='ssh -2 -p 22 nyx@eos.iuvo.si'
-alias aura='ssh -2 -p 22 aegir@aura.iuvo.si'
-alias aura.root='ssh -2 -p 22 nyx@aura.iuvo.si'
-alias de.agiledrop='ssh -2 -p 22 agiledrop@de.agiledrop.com'
-alias dev.agiledrop='ssh -2 -p 22 agiledrop@dev.agiledrop.com'
-alias prod.agiledrop='ssh -2 -p 22 agiledrop@prod.agiledrop.com'
-alias homeathome='ssh -2 -p 22 agile@new.homeathome.com'
-alias unesco.staging='ssh -2 -p 22 agiledrop@193.242.192.195'
+# Import file with server aliases
+source .bash_servers
