@@ -113,4 +113,4 @@ alias myip='curl ip.appspot.com'
 # --------------------------------------------
 
 # Import file with server aliases
-source .bash_servers
+source "$HOME/.bash_servers"
