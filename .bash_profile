@@ -1,4 +1,3 @@
-source ~/.profile
 # ----------------------------------------------------------------------------------------
 #
 # Custom bash configuration file containing some neat
@@ -14,6 +13,7 @@ source ~/.profile
 export PATH="$HOME/.bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/Applications/MAMP/bin/php/php5.6.27/bin:$PATH"
+export PATH="/Applications/MAMP/bin/php/php7.0.12/bin:$PATH"
 export PATH="/Applications/MAMP/Library/bin:$PATH"
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 
